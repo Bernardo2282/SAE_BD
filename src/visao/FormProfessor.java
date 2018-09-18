@@ -127,7 +127,6 @@ public class FormProfessor extends javax.swing.JFrame {
     private void jButtonCadastrarProfessorActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonCadastrarProfessorActionPerformed
         prof.setNome(jTextFieldNomeProfessor.getText());
         prof.setSobrenome(jTextFieldSobrenomeProfessor.getText());
-        //prof.setPerfil((String) jComboBoxPerfilProfessor.getSelectedItem());
         control.cadastrarProfessor(prof);
     }//GEN-LAST:event_jButtonCadastrarProfessorActionPerformed
 

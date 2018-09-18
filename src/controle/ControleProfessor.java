@@ -24,7 +24,6 @@ public class ControleProfessor {
             PreparedStatement pst = conex.con.prepareStatement("INSERT INTO professor(nomePROF, sobrenomePROF, perfil) VALUES(?, ?, 'Professor');");
             pst.setString(1, prof.getNome());
             pst.setString(2, prof.getSobrenome());
-            //pst.setString(3, prof.getPerfil());
             pst.execute();
             JOptionPane.showMessageDialog(null, "Professor cadastrado com sucesso!");
         } catch (SQLException ex) {
