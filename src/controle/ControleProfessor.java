@@ -29,6 +29,6 @@ public class ControleProfessor {
         } catch (SQLException ex) {
             JOptionPane.showMessageDialog(null, "Erro ao cadastrar o professor!"+ex.getMessage());
         }
-        conex.conexao();
+        conex.desconecta();
     }
 }

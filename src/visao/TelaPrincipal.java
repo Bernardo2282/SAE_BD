@@ -35,6 +35,7 @@ public class TelaPrincipal extends javax.swing.JFrame {
         jMenuCadastro = new javax.swing.JMenu();
         jMenuItemCadProfessores = new javax.swing.JMenuItem();
         jMenuItemCadAdministradores = new javax.swing.JMenuItem();
+        jMenu1 = new javax.swing.JMenu();
         jMenuRelatorio = new javax.swing.JMenu();
         jMenuFerramenta = new javax.swing.JMenu();
         jMenuItemTelaBemVindo = new javax.swing.JMenuItem();
@@ -50,7 +51,7 @@ public class TelaPrincipal extends javax.swing.JFrame {
         getContentPane().add(jLabelFundoTelaPrincipal);
         jLabelFundoTelaPrincipal.setBounds(0, -10, 500, 380);
 
-        jMenuCadastro.setText("Cadastros");
+        jMenuCadastro.setText("Cadastrar");
 
         jMenuItemCadProfessores.setText("Professores");
         jMenuItemCadProfessores.addActionListener(new java.awt.event.ActionListener() {
@@ -64,6 +65,9 @@ public class TelaPrincipal extends javax.swing.JFrame {
         jMenuCadastro.add(jMenuItemCadAdministradores);
 
         jMenuBar1.add(jMenuCadastro);
+
+        jMenu1.setText("Inserir");
+        jMenuBar1.add(jMenu1);
 
         jMenuRelatorio.setText("Relatório");
         jMenuBar1.add(jMenuRelatorio);
@@ -140,6 +144,7 @@ public class TelaPrincipal extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabelFundoTelaPrincipal;
+    private javax.swing.JMenu jMenu1;
     private javax.swing.JMenuBar jMenuBar1;
     private javax.swing.JMenu jMenuCadastro;
     private javax.swing.JMenu jMenuFerramenta;
