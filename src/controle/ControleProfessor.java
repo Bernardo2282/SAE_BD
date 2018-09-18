@@ -18,13 +18,13 @@ public class ControleProfessor {
     ConexaoBD conex = new ConexaoBD();
     ModeloProfessor prof = new ModeloProfessor();
     
-    public void Salvar(ModeloProfessor prof){
+    public void cadastrarProfessor(ModeloProfessor prof){
         conex.conexao();
         try {
-            PreparedStatement pst = conex.con.prepareStatement("INSERT INTO professor(nomePROF, sobrenomePROF, perfil) VALUES(?, ?, ?);");
+            PreparedStatement pst = conex.con.prepareStatement("INSERT INTO professor(nomePROF, sobrenomePROF, perfil) VALUES(?, ?, 'Professor');");
             pst.setString(1, prof.getNome());
             pst.setString(2, prof.getSobrenome());
-            pst.setString(3, prof.getPerfil());
+            //pst.setString(3, prof.getPerfil());
             pst.execute();
             JOptionPane.showMessageDialog(null, "Professor cadastrado com sucesso!");
         } catch (SQLException ex) {

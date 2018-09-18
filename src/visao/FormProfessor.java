@@ -37,8 +37,6 @@ public class FormProfessor extends javax.swing.JFrame {
         jTextFieldNomeProfessor = new javax.swing.JTextField();
         jTextFieldSobrenomeProfessor = new javax.swing.JTextField();
         jButtonCadastrarProfessor = new javax.swing.JButton();
-        jComboBoxPerfilProfessor = new javax.swing.JComboBox<>();
-        jLabel4 = new javax.swing.JLabel();
         jLabel1 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
 
@@ -57,10 +55,6 @@ public class FormProfessor extends javax.swing.JFrame {
             }
         });
 
-        jComboBoxPerfilProfessor.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Professor", "Administrador" }));
-
-        jLabel4.setText("Perfil:");
-
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
@@ -69,13 +63,11 @@ public class FormProfessor extends javax.swing.JFrame {
                 .addGap(20, 20, 20)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addComponent(jLabelSobrenomeProfessor)
-                    .addComponent(jLabelNomeProfessor)
-                    .addComponent(jLabel4))
+                    .addComponent(jLabelNomeProfessor))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addComponent(jComboBoxPerfilProfessor, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addGap(0, 0, Short.MAX_VALUE)
                         .addComponent(jButtonCadastrarProfessor))
                     .addComponent(jTextFieldNomeProfessor, javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jTextFieldSobrenomeProfessor, javax.swing.GroupLayout.Alignment.LEADING))
@@ -93,11 +85,7 @@ public class FormProfessor extends javax.swing.JFrame {
                     .addComponent(jLabelSobrenomeProfessor)
                     .addComponent(jTextFieldSobrenomeProfessor, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                        .addComponent(jComboBoxPerfilProfessor, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addComponent(jLabel4))
-                    .addComponent(jButtonCadastrarProfessor))
+                .addComponent(jButtonCadastrarProfessor)
                 .addGap(0, 50, Short.MAX_VALUE))
         );
 
@@ -139,8 +127,8 @@ public class FormProfessor extends javax.swing.JFrame {
     private void jButtonCadastrarProfessorActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonCadastrarProfessorActionPerformed
         prof.setNome(jTextFieldNomeProfessor.getText());
         prof.setSobrenome(jTextFieldSobrenomeProfessor.getText());
-        prof.setPerfil((String) jComboBoxPerfilProfessor.getSelectedItem());
-        control.Salvar(prof);
+        //prof.setPerfil((String) jComboBoxPerfilProfessor.getSelectedItem());
+        control.cadastrarProfessor(prof);
     }//GEN-LAST:event_jButtonCadastrarProfessorActionPerformed
 
     /**
@@ -180,10 +168,8 @@ public class FormProfessor extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton jButtonCadastrarProfessor;
-    private javax.swing.JComboBox<String> jComboBoxPerfilProfessor;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
-    private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabelNomeProfessor;
     private javax.swing.JLabel jLabelSobrenomeProfessor;
     private javax.swing.JPanel jPanel1;
