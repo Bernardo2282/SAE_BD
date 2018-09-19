@@ -58,12 +58,12 @@ public class FormProduto extends javax.swing.JFrame {
     private void jComboBoxProdutoItemStateChanged(java.awt.event.ItemEvent evt) {//GEN-FIRST:event_jComboBoxProdutoItemStateChanged
         if(evt.getStateChange() == ItemEvent.SELECTED){
             if(this.jComboBoxProduto.getSelectedIndex() > 0){
-                this.jComboBoxDescricao.setModel(new DefaultComboBoxModel(this.getProduto((String) this.jComboBoxProduto.getSelectedItem())));
+                this.jComboBoxDescricao.setModel(new DefaultComboBoxModel(this.getComboBoxProduto((String) this.jComboBoxProduto.getSelectedItem())));
             }
         }
     }//GEN-LAST:event_jComboBoxProdutoItemStateChanged
 
-    public String[] getProduto(String prod){
+    public String[] getComboBoxProduto(String prod){
         
         if(prod.equalsIgnoreCase("Pincel")){
             String[] desc = new String[4];
@@ -76,11 +76,11 @@ public class FormProduto extends javax.swing.JFrame {
         
         if(prod.equalsIgnoreCase("Refil")){
             String[] desc = new String[5];
-            desc[0] = "Apagador";
-            desc[1] = "Azul";
-            desc[2] = "Vermelho";
-            desc[3] = "Preto";
-            desc[4] = "Verde";
+            desc[0] = "de Apagador";
+            desc[1] = "(Pincel Azul)";
+            desc[2] = "(Vermelho)";
+            desc[3] = "(Preto)";
+            desc[4] = "(Verde)";
             return desc;
         }
         return null;
