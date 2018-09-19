@@ -5,8 +5,10 @@
  */
 package visao;
 
+
 import java.awt.event.ItemEvent;
 import javax.swing.DefaultComboBoxModel;
+
 
 /**
  *
@@ -14,9 +16,6 @@ import javax.swing.DefaultComboBoxModel;
  */
 public class FormProduto extends javax.swing.JFrame {
 
-    /**
-     * Creates new form FormProduto
-     */
     public FormProduto() {
         initComponents();
     }
@@ -30,38 +29,62 @@ public class FormProduto extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jLabel1 = new javax.swing.JLabel();
-        jComboBoxProduto = new javax.swing.JComboBox<>();
-        jComboBoxDescricao = new javax.swing.JComboBox<>();
+        jPanel1 = new javax.swing.JPanel();
+        jPanel2 = new javax.swing.JPanel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
-        getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jLabel1.setFont(new java.awt.Font("Dialog", 1, 18)); // NOI18N
-        jLabel1.setText("Produto:");
-        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 80, -1, -1));
+        jPanel1.setBackground(new java.awt.Color(255, 255, 255));
 
-        jComboBoxProduto.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Selecione um produto", "Pincel", "Refil" }));
-        jComboBoxProduto.addItemListener(new java.awt.event.ItemListener() {
-            public void itemStateChanged(java.awt.event.ItemEvent evt) {
-                jComboBoxProdutoItemStateChanged(evt);
-            }
-        });
-        getContentPane().add(jComboBoxProduto, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 80, 160, -1));
+        javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
+        jPanel1.setLayout(jPanel1Layout);
+        jPanel1Layout.setHorizontalGroup(
+            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 0, Short.MAX_VALUE)
+        );
+        jPanel1Layout.setVerticalGroup(
+            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 164, Short.MAX_VALUE)
+        );
 
-        getContentPane().add(jComboBoxDescricao, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 80, 160, -1));
+        jPanel2.setBackground(new java.awt.Color(153, 153, 153));
+        jPanel2.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "CADASTRAR PRODUTO", javax.swing.border.TitledBorder.CENTER, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Dialog", 1, 18))); // NOI18N
 
-        setSize(new java.awt.Dimension(498, 385));
+        javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
+        jPanel2.setLayout(jPanel2Layout);
+        jPanel2Layout.setHorizontalGroup(
+            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 844, Short.MAX_VALUE)
+        );
+        jPanel2Layout.setVerticalGroup(
+            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 127, Short.MAX_VALUE)
+        );
+
+        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
+        getContentPane().setLayout(layout);
+        layout.setHorizontalGroup(
+            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(layout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jPanel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap())
+        );
+        layout.setVerticalGroup(
+            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jPanel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap())
+        );
+
+        setSize(new java.awt.Dimension(882, 385));
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
-
-    private void jComboBoxProdutoItemStateChanged(java.awt.event.ItemEvent evt) {//GEN-FIRST:event_jComboBoxProdutoItemStateChanged
-        if(evt.getStateChange() == ItemEvent.SELECTED){
-            if(this.jComboBoxProduto.getSelectedIndex() > 0){
-                this.jComboBoxDescricao.setModel(new DefaultComboBoxModel(this.getComboBoxProduto((String) this.jComboBoxProduto.getSelectedItem())));
-            }
-        }
-    }//GEN-LAST:event_jComboBoxProdutoItemStateChanged
 
     public String[] getComboBoxProduto(String prod){
         
@@ -78,11 +101,19 @@ public class FormProduto extends javax.swing.JFrame {
             String[] desc = new String[5];
             desc[0] = "de Apagador";
             desc[1] = "(Pincel Azul)";
-            desc[2] = "(Vermelho)";
-            desc[3] = "(Preto)";
-            desc[4] = "(Verde)";
+            desc[2] = "(Pincel Vermelho)";
+            desc[3] = "(Pincel Preto)";
+            desc[4] = "(Pincel Verde)";
             return desc;
         }
+        
+//        if(prod.equalsIgnoreCase("Chave")){
+//            String[] desc = new String[3];
+//            desc[0] = "Lab-01";
+//            desc[1] = "Lab-02";
+//            desc[2] = "Lab-03";
+//            return desc;
+//        }
         return null;
     }
     public static void main(String args[]) {
@@ -118,8 +149,7 @@ public class FormProduto extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JComboBox<String> jComboBoxDescricao;
-    private javax.swing.JComboBox<String> jComboBoxProduto;
-    private javax.swing.JLabel jLabel1;
+    private javax.swing.JPanel jPanel1;
+    private javax.swing.JPanel jPanel2;
     // End of variables declaration//GEN-END:variables
 }
